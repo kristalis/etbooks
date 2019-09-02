@@ -15,6 +15,8 @@ class CreateChristianauthorsTable extends Migration
     {
         Schema::create('christianauthors', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
+            $table->string('website')->nullable();
             $table->timestamps();
         });
     }

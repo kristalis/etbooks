@@ -15,6 +15,10 @@ class CreateMinistrybooksTable extends Migration
     {
         Schema::create('ministrybooks', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('title');
+            $table->text('brief');
+            $table->string('amzurl');
+            $table->blob('bookcover');
             $table->timestamps();
         });
     }
