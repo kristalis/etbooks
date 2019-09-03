@@ -23,3 +23,26 @@ $factory->define(App\User::class, function (Faker $faker) {
         'remember_token' => Str::random(10),
     ];
 });
+
+$factory->define(App\Ministrybook::class, function(\Faker\Generator $faker) {
+    return [
+        'title' => $faker->title,
+        'bookcover' => $faker->imageUrl(944, 320),
+        'brief' => $faker->text(rand(100, 500)),
+        'amzurl' => $faker->url,
+      
+    ];
+});
+$factory->define(App\Christianauthor::class, function(\Faker\Generator $faker) {
+    return [
+        'name' => $faker->name,
+        'website' => $faker->url,
+      
+    ];
+});
+
+$factory->define(App\Category::class, function(\Faker\Generator $faker) {
+    return [
+        'name' => ucfirst($faker->words(rand(5,20), true))
+    ];
+});
