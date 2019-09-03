@@ -18,7 +18,7 @@ class CreateMinistrybooksTable extends Migration
             $table->string('title');
             $table->text('brief');
             $table->string('amzurl');
-            $table->blob('bookcover');
+            $table->string('bookcover');
             $table->timestamps();
         });
     }

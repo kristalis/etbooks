@@ -26,7 +26,7 @@ $factory->define(App\User::class, function (Faker $faker) {
 
 $factory->define(App\Ministrybook::class, function(\Faker\Generator $faker) {
     return [
-        'title' => $faker->title,
+        'title' => ucfirst($faker->words(rand(5,20), true)),
         'bookcover' => $faker->imageUrl(944, 320),
         'brief' => $faker->text(rand(100, 500)),
         'amzurl' => $faker->url,
